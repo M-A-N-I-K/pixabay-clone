@@ -4,6 +4,7 @@ import SearchBar from './utils/searchBar'
 import { ImageState } from './context/imageContext'
 import ImagesSection from './utils/imagesSection'
 import axios from 'axios'
+import ProductPage from './utils/productPage'
 
 const API_KEY = import.meta.env.VITE_API_KEY;
 
@@ -43,6 +44,7 @@ const home = () => {
                     searchQuery !== "" ?
                         <ImagesSection images={images} /> : ""
                 }
+                <ProductPage />
             </div >
         </>
 
