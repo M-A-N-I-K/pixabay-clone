@@ -3,18 +3,18 @@ import React from 'react'
 const productPage = ({ image, showProduct, setShowProduct }) => {
 
     return (
-        <div className={`absolute bottom-2 z-30 ${showProduct ? "flex" : "hidden"} flex-col h-[85vh] bg-gray-100 w-[90vw] rounded mt-6`}>
+        <div className={`absolute left-0 sm:left-14 bottom-2 z-30 ${showProduct ? "flex" : "hidden"} flex-col h-[100vh] sm:h-[90vh] bg-gray-100 w-[100vw] sm:w-[90vw] rounded mt-6`}>
             <div className='p-4 bg-gray-200 w-full flex justify-between'>
                 <h1 className='text-black font-semibold text-lg'>Preview ID : {image?.id}</h1>
                 <svg onClick={() => setShowProduct(!showProduct)} className='cursor-pointer h-4 w-4' version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" width="121.31px" height="122.876px" viewBox="0 0 121.31 122.876" enableBackground="new 0 0 121.31 122.876" space="preserve"><g><path fillRule="evenodd" clipRule="evenodd" d="M90.914,5.296c6.927-7.034,18.188-7.065,25.154-0.068 c6.961,6.995,6.991,18.369,0.068,25.397L85.743,61.452l30.425,30.855c6.866,6.978,6.773,18.28-0.208,25.247 c-6.983,6.964-18.21,6.946-25.074-0.031L60.669,86.881L30.395,117.58c-6.927,7.034-18.188,7.065-25.154,0.068 c-6.961-6.995-6.992-18.369-0.068-25.397l30.393-30.827L5.142,30.568c-6.867-6.978-6.773-18.28,0.208-25.247 c6.983-6.963,18.21-6.946,25.074,0.031l30.217,30.643L90.914,5.296L90.914,5.296z" /></g></svg>
             </div>
             <div className="p-4 flex flex-col md:flex-row items-center">
                 <div className="px-8 items-stretch">
-                    <div className="h-full w-11/12 rounded-lg bg-gray-100">
-                        <img className='h-3/4 object-scale-down rounded-lg ' src={image?.largeImageURL} alt="" />
+                    <div className="h-full w-full sm:w-11/12 rounded-lg bg-gray-100">
+                        <img className='h-full sm:h-3/4  rounded-lg ' src={image?.largeImageURL} alt="" />
                     </div>
                 </div>
-                <div className='text-gray-500 p-4 h-full flex flex-col justify-between w-1/2'>
+                <div className='text-gray-500 p-4 h-full flex flex-col justify-between w-full sm:w-1/2'>
                     <div>
                         <h1 className='text-gray-800'>Download</h1>
                     </div>
@@ -38,7 +38,7 @@ const productPage = ({ image, showProduct, setShowProduct }) => {
                         <button className='px-4 py-2 rounded-sm text-white text-sm bg-[#4BC34B]'>Download for free!</button>
                     </div>
                     <div>
-                        <h1 className='text-gray-800'>Information</h1>
+                        <h1 className='mt-2 sm:mt-0 text-gray-800'>Information</h1>
                         <div className='grid grid-cols-3 gap-2 text-xs text-gray-600'>
                             <div>
                                 <p>User</p>

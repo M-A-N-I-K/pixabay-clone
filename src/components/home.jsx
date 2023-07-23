@@ -24,7 +24,7 @@ const home = () => {
 
 
     useEffect(() => {
-        fetchRandomImage("galaxy");
+        fetchRandomImage("dark");
     }, [])
 
     return (
@@ -38,7 +38,7 @@ const home = () => {
                 </div>
                 {
                     searchQuery !== "" ?
-                        <h1 className='text-5xl font-bold'>Results : {searchQuery}</h1> : ""
+                        <h1 className='text-3xl sm:text-5xl font-bold'>Results : {searchQuery}</h1> : ""
                 }
                 {
                     searchQuery !== "" ?
